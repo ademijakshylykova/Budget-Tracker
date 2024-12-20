@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <script src="./script.js"></script>
+  <div class="container">
+    <h1>Budget Tracker</h1>
+    <div>
+      <h3>Balance: $<span id="balance">0.00</span></h3>
+      <h4>Income: $<span id="income">0.00</span></h4>
+      <h4>Expenses: $<span id="expenses">0.00</span></h4>
+    </div>
+    <div class="form-control">
+      <label for="description">Description</label>
+      <input type="text" id="description" placeholder="Enter description">
+    </div>
+    <div class="form-control">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+    <div class="form-control">
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="Food">Food</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Bills">Bills</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+    <button id="addTransaction">Add Transaction</button>
+    <button id="clearTransactions">Clear All Transactions</button>
+
+    <div class="filters">
+      <select id="filterCategory">
+        <option value="">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Bills">Bills</option>
+        <option value="Others">Others</option>
+      </select>
+      <input type="date" id="filterDate">
+      <button id="applyFilters">Apply Filters</button>
+    </div>
+
+    <div class="transactions" id="transactions"></div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
