@@ -1,0 +1,175 @@
+/* Общие стили для страницы */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Заголовки */
+h1 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3, h4 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Стили для формы */
+.form-control {
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+button:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 192, 0, 0.3);
+}
+
+/* Кнопка добавления транзакции */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для фильтров */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.filters select,
+.filters input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#applyFilters {
+    flex: 0;
+    background-color: #2196F3;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#applyFilters:hover {
+    background-color: #1976D2;
+}
+
+/* Стили для списка транзакций */
+.transactions {
+    margin-top: 30px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.transaction:hover {
+    background-color: #f1f1f1;
+}
+
+/* Стили для доходов и расходов */
+.income {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.expense {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.transaction span {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Респонсивность для мобильных устройств */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-control input,
+    .form-control select,
+    .filters select,
+    .filters input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button, #applyFilters {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+}
+
